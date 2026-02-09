@@ -4,9 +4,12 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { CarFront, ArrowLeft, Heart } from "lucide-react";
+import { currentUser } from '@clerk/nextjs/server';
 
 const Header = async ({ isAdminPage = false }) => {
-    const isAdmin = false
+
+    const user =  await currentUser();
+    const isAdmin = user?.role === "ADMIN"
 
     return (
         <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">

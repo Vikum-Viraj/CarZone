@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from '@clerk/nextjs'
-import Header from "@/components/ui/header";
+import Header from "@/components/header";
 import { Toast } from "radix-ui";
 import { Toaster } from "sonner";
 
