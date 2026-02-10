@@ -18,6 +18,7 @@ const AdminLayout = async ({ children }) => {
         <div className='flex h-full w-56 flex-col top-20 fixed inset-y-0 z-50'>
           <SideBar/>
         </div>
+        <main className='md:pl-56 pt-[80px] h-full'>{children}</main>
       </div>
     );
   } catch (error) {
